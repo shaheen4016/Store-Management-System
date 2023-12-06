@@ -1,0 +1,75 @@
+<!-- <h1>Payment Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Order</mat-label>
+            <input matInput formControlName="order" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input matInput formControlName="amount" />
+        </mat-form-field>
+    </div>
+ 
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>PaymentDate</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="paymentDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>PaymentMethod</mat-label>
+            <input matInput formControlName="paymentMethod" />
+        </mat-form-field>
+    </div>
+
+    
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+ -->
+
+
+
+
+
+
+ <h1 style="text-align: center;">Payment Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        
+        <div class="mb-3, col-md-4">
+            <label for="order" class="form-label">Order</label>
+            <!-- <input type="text" class="form-control" id="order" formControlName="order"> -->
+            <select formControlName="order">
+                <option *ngFor="let order of orders" [value]="order.id">{{order.customer?.name}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="text" class="form-control" id="amount" formControlName="amount">
+        </div>
+     
+        <div class="mb-3, col-md-4">
+            <label for="paymentDate" class="form-label">Payment Date</label>
+            <input type="date" class="form-control" id="paymentDate" formControlName="paymentDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="paymentMethod" class="form-label">Payment Method</label>
+            <input type="text" class="form-control" id="paymentMethod" formControlName="paymentMethod">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="Payment" class="btn btn-primary" style="margin-left: 30px;">Payment</button>
+    </form>
+</div>

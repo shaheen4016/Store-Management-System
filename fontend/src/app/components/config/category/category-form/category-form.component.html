@@ -1,0 +1,41 @@
+<!-- <h1>Category Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" />
+        </mat-form-field>
+    </div>
+
+   
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+ -->
+
+
+
+
+ <h1 style="text-align: center;">Category Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" formControlName="description">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

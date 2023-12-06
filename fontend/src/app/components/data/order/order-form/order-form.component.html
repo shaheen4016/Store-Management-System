@@ -1,0 +1,61 @@
+<!-- <h1>Order Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Customer</mat-label>
+            <input matInput formControlName="customer" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>OrderDate</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="orderDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>TotalAmount</mat-label>
+            <input matInput formControlName="totalAmount" />
+        </mat-form-field>
+    </div>
+
+    
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+
+
+
+<h1 style="text-align: center;">Sales Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="customer" class="form-label">Customer</label>
+            <!-- <input type="text" class="form-control" id="customer" formControlName="customer"> -->
+            <select formControlName="customer">
+                <option *ngFor="let customer of customers" [value]="customer.id">{{customer.name}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="salesDate" class="form-label">Sales Date</label>
+            <input type="date" class="form-control" id="salesDate" formControlName="salesDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="totalAmount" class="form-label">Total Amount</label>
+            <input type="text" class="form-control" id="totalAmount" formControlName="totalAmount">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

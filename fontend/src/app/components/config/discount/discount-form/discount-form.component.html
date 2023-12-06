@@ -1,0 +1,94 @@
+<!-- <h1>Discount Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" />
+        </mat-form-field>
+    </div>
+
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>DiscountType</mat-label>
+            <input matInput formControlName="discountType" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Value</mat-label>
+            <input matInput formControlName="value" />
+        </mat-form-field>
+    </div>
+
+ 
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>StartDate</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="startDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>EndDate</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="endDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+
+<h1 style="text-align: center;">Discount Form</h1>
+<div style="margin-left: 40%;" >
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" formControlName="description">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="discountType" class="form-label">Discount Type</label>
+            <input type="text" class="form-control" id="discountType" formControlName="discountType">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="value" class="form-label">Value</label>
+            <input type="text" class="form-control" id="value" formControlName="value">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="startDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="endDate" class="form-label">End Date</label>
+            <input type="date" class="form-control" id="endDate" formControlName="endDate">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

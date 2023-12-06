@@ -1,0 +1,76 @@
+<!-- <h1>Review Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Product</mat-label>
+            <input matInput formControlName="product" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Customer</mat-label>
+            <input matInput formControlName="customer" />
+        </mat-form-field>
+    </div>
+
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Rating</mat-label>
+            <input matInput formControlName="rating" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Comment</mat-label>
+            <input matInput formControlName="comment" />
+        </mat-form-field>
+    </div>
+
+
+    
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
+ -->
+
+
+
+
+
+
+ <h1 style="text-align: center;">Review Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="product" class="form-label">Product</label>
+            <!-- <input type="text" class="form-control" id="product" formControlName="product"> -->
+            <select formControlName="product">
+                <option *ngFor="let product of products" [value]="product.id">{{product.name}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="customer" class="form-label">Customer</label>
+            <!-- <input type="text" class="form-control" id="customer" formControlName="customer"> -->
+            <select formControlName="customer">
+                <option *ngFor="let customer of customers" [value]="customer.id">{{customer.name}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="rating" class="form-label">Rating</label>
+            <input type="number" class="form-control" id="rating" formControlName="rating">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="comment" class="form-label">Comment</label>
+            <textarea class="form-control" id="comment" formControlName="comment"></textarea>
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

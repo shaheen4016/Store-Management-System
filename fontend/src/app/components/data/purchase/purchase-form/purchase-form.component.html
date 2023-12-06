@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">Purchase Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        
+        <div class="mb-3, col-md-4">
+            <label for="product" class="form-label">Product</label>
+            <!-- <input type="text" class="form-control" id="product formControlName="product> -->
+            <select formControlName="product">
+                <option *ngFor="let product of products" [value]="product.id">{{product.name}}</option>
+            </select>
+        </div>
+
+        <div class="mb-3, col-md-4">
+            <label for="purchaseDate" class="form-label">Purchase Date</label>
+            <input type="date" class="form-control" id="purchase" formControlName="purchaseDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" formControlName="quantity">
+        </div>
+     
+        
+    
+        <div class="mb-3, col-md-4">
+            <label for="totalAmount" class="form-label">TotalAmount</label>
+            <input type="number" class="form-control" id="totalAmount" formControlName="totalAmount">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

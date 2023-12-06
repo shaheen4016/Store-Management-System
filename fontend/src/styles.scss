@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-snack-bar-container {
+    --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+    --mat-snack-bar-button-color: #a716b4;
+    &.success-snackbar {
+        --mdc-snackbar-container-color: green;
+    }
+    &.error-snackbar {
+        --mdc-snackbar-container-color: rgb(189, 5, 5);
+    }
+}
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

@@ -1,0 +1,39 @@
+<div style="display: flex; justify-content: space-between;">
+    <h2>Sales List</h2>
+    <!-- <button></button> -->
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="customer">
+        <th mat-header-cell *matHeaderCellDef> Customer </th>
+        <td mat-cell *matCellDef="let element"> {{element.customer.firstName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="orderDate">
+        <th mat-header-cell *matHeaderCellDef> OrderDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.orderDate}} </td>
+    </ng-container>
+    <ng-container matColumnDef="totalAmount">
+        <th mat-header-cell *matHeaderCellDef> TotalAmount </th>
+        <td mat-cell *matCellDef="let element"> {{element.totalAmount}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let i = index;">
+            <button mat-icon-button color="warn" (click)="delete(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" (click)="edit(i)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button *ngIf="isPaymentDue(i)" mat-icon-button color="info" (click)="payment(i)">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,98 @@
+<!-- <h1>Inventory Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Product</mat-label>
+            <input matInput formControlName="product" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>QuantityInStock</mat-label>
+            <input matInput formControlName="quantityInStock" />
+        </mat-form-field>
+    </div>
+
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>RestockThreshold</mat-label>
+            <input matInput formControlName="restockThreshold" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Location</mat-label>
+            <input matInput formControlName="location" />
+        </mat-form-field>
+    </div>
+
+ 
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>LastRestockDate</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="lastRestockDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Notes</mat-label>
+            <input matInput formControlName="notes" />
+        </mat-form-field>
+    </div>
+
+    
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+
+
+
+<h1 style="text-align: center;">Inventory Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="product" class="form-label">Product</label>
+            <!-- <input type="text" class="form-control" id="product" formControlName="product"> -->
+            <select formControlName="product">
+                <option *ngFor="let product of products" [value]="product.id">{{product.name}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="quantityInStock" class="form-label">Quantity in Stock</label>
+            <input type="text" class="form-control" id="quantityInStock" formControlName="quantityInStock">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="restockThreshold" class="form-label">Restock Threshold</label>
+            <input type="text" class="form-control" id="restockThreshold" formControlName="restockThreshold">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" formControlName="location">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="lastRestockDate" class="form-label">Last Restock Date</label>
+            <input type="date" class="form-control" id="lastRestockDate" formControlName="lastRestockDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="notes" class="form-label">Notes</label>
+            <input type="text" class="form-control" id="notes" formControlName="notes">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

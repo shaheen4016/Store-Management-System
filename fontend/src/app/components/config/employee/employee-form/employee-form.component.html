@@ -1,0 +1,179 @@
+<!-- <h1>Employee Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Phone</mat-label>
+            <input matInput formControlName="phoneNumber" />
+        </mat-form-field>
+    </div>
+
+  
+ 
+ 
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="hireDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Position</mat-label>
+            <textarea matInput formControlName="position"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Salary</mat-label>
+            <input matInput formControlName="salary" />
+        </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+
+
+
+<h1 style="text-align: center;">Employee Form</h1>
+<div style="margin-left: 40%;" >
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="firstName" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="phoneNumber" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="hireDate" class="form-label">Date</label>
+            <input type="date" class="form-control" id="hireDate" formControlName="hireDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="position" class="form-label">Position</label>
+            <textarea class="form-control" id="position" formControlName="position"></textarea>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="salary" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="salary" formControlName="salary">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<!-- <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="16:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>        
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phoneNumber" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="hireDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>  
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Position</mat-label>
+                    <input matInput formControlName="position" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile> 
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Salary</mat-label>
+                    <input matInput formControlName="salary" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>     
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->

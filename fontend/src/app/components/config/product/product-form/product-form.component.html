@@ -1,0 +1,93 @@
+<!-- <h1>Product Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" />
+        </mat-form-field>
+    </div>
+
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>QuantityInStock</mat-label>
+            <input matInput formControlName="quantityInStock" />
+        </mat-form-field>
+    </div>
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Supplier</mat-label>
+            <input matInput formControlName="supplier" />
+        </mat-form-field>
+    </div>
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Category</mat-label>
+            <input matInput formControlName="category" />
+        </mat-form-field>
+    </div>
+
+ 
+   
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+
+<h1 style="text-align: center;">Product Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" formControlName="description">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" formControlName="price">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="quantityInStock" class="form-label">Quantity in Stock</label>
+            <input type="text" class="form-control" id="quantityInStock" formControlName="quantityInStock">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="supplier" class="form-label">Supplier</label>
+            <!-- <input type="text" class="form-control" id="supplier" formControlName="supplier"> -->
+            <select formControlName="supplier">
+                <option *ngFor="let supplier of suppliers" [value]="supplier.id">{{supplier.name}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="category" class="form-label">Category</label>
+            <!-- <input type="text" class="form-control" id="category" formControlName="category"> -->
+            <select formControlName="category">
+                <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+            </select>
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,86 @@
+<!-- <h1>Transaction Form</h1>
+<form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Employee</mat-label>
+            <input matInput formControlName="employee" />
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>TransactionType</mat-label>
+            <input matInput formControlName="transactionType" />
+        </mat-form-field>
+    </div>
+
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input matInput formControlName="amount" />
+        </mat-form-field>
+    </div>
+
+ 
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>TransactionDate</mat-label>
+            <input matInput [matDatepicker]="picker" transactionDate="transactionDate">
+          
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+
+    <div class="input-container">
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" />
+        </mat-form-field>
+    </div>
+
+    
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+ -->
+
+
+
+
+
+ <h1 style="text-align: center;">Transaction Form</h1>
+<div style="margin-left: 40%;">
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
+        <div class="mb-3, col-md-4">
+            <label for="employee" class="form-label">Employee</label>
+            <!-- <input type="text" class="form-control" id="employee" formControlName="employee"> -->
+            <select formControlName="employee">
+                <option *ngFor="let employee of employees" [value]="employee.id">{{employee.firstName}}</option>
+            </select>
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="transactionType" class="form-label">Transaction Type</label>
+            <input type="text" class="form-control" id="transactionType" formControlName="transactionType" [ngbTypeahead]="searchTransactionType">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" formControlName="amount">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="transactionDate" class="form-label">Transaction Date</label>
+            <input type="date" class="form-control" id="transactionDate" formControlName="transactionDate">
+        </div>
+    
+        <div class="mb-3, col-md-4">
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" formControlName="description">
+        </div><br>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
